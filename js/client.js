@@ -63,7 +63,7 @@ const store = createStore(
 );
 
 const handleSetTitle = title => {
-  document.title = `${title} | AOE Technology Radar`;
+  document.title = `${title} | Flagbit Technology Radar`;
   track();
 };
 

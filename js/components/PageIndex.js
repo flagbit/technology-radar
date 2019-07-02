@@ -21,7 +21,7 @@ export default function PageIndex({
       <SetTitle {...props} title="Technology Radar" />
       <div className="headline-group">
         <HeroHeadline alt={`Version #${numberOfReleases}`}>
-          AOE Technology Radar
+          Flagbit Technology Radar
         </HeroHeadline>
       </div>
       <QuadrantGrid items={featuredOnly(items)} />
