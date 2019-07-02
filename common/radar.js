@@ -34,8 +34,8 @@ const checkAttributes = (fileName, attributes) => {
 
   const quadrants = [
     'languages-and-frameworks',
-    'methods-and-patterns',
-    'platforms-and-aoe-services',
+    'techniques',
+    'platforms-and-services',
     'tools',
   ];
   if (attributes.quadrant && !quadrants.includes(attributes.quadrant)) {
