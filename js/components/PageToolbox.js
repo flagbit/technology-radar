@@ -6,8 +6,8 @@ import SetTitle from './SetTitle';
 export default function PageToolbox({ leaving, onLeave, ...props }) {
   return (
     <Fadeable leaving={leaving} onLeave={onLeave}>
-      <SetTitle {...props} title="Small AOE Toolbox" />
-      <HeroHeadline>Small AOE Toolbox</HeroHeadline>
+      <SetTitle {...props} title="Small Flagbit Toolbox" />
+      <HeroHeadline>Small Flagbit Toolbox</HeroHeadline>
       <div className="fullpage-content">
         <h3>Useful Tools</h3>
 

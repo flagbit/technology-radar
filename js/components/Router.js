@@ -18,7 +18,7 @@ const getPageByName = (items, pageName) => {
   if (pageName === 'help-and-about-tech-radar') {
     return PageHelp;
   }
-  if (pageName === 'aoe-toolbox') {
+  if (pageName === 'toolbox') {
     return PageToolbox;
   }
   if (quadrants.includes(pageName)) {

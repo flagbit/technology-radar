@@ -14,7 +14,7 @@ export const getPageNames = (radar) => {
     'index',
     'overview',
     'help-and-about-tech-radar',
-    'aoe-toolbox',
+    'toolbox',
     ...quadrants,
     ...getItemPageNames(radar.items),
   ]
@@ -32,7 +32,7 @@ export const rings = [
 const messages = {
   'languages-and-frameworks': 'Languages & Frameworks',
   'techniques': 'Techniques',
-  'platforms-and-services': 'Platforms and Services',
+  'platforms-and-services': 'Platforms & Services',
   'tools': 'Tools',
 };
 

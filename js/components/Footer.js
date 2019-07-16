@@ -12,7 +12,7 @@ export default function Footer({ items, pageName }) {
         logoContent={<img src={assetUrl('logo.svg')} width="150px" height="60px" />}
       >
         <span className="footnote">
-      AOE is a leading global provider of services for digital transformation and digital business models. AOE relies exclusively on established Enterprise Open Source technologies. This leads to innovative solutions, digital products and portals in agile software projects, and helps build long-lasting, strategic partnerships with our customers.
+        Flagbit develop and maintain highly complex web applications such as online shops, PWAs or e-commerce platforms for customers from a wide variety of industries. At our Karlsruhe location, our team of e-commerce consultants and web developers plans, realizes and optimizes innovative and agile solutions based on Magento, Spryker and Akeneo.
         </span>
       </Branding>
       <FooterEnd/>
