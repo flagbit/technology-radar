@@ -5,4 +5,3 @@ quadrant:   platforms-and-services
 
 ---
 
-
