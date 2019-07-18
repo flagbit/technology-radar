@@ -42,7 +42,7 @@ const renderFullPage = (html, pageTitle, preloadedState) => {
       <link rel="shortcut icon" href="${assetUrl('favicon.ico')}" type="image/x-icon">
       <meta name="format-detection" content="telephone=no">
       <meta name="viewport" content="width=device-width, maximum-scale=1.0, initial-scale=1.0, user-scalable=0">
-      <meta property="og:title" content="${pageTitle} | AOE Technology Radar" />
+      <meta property="og:title" content="${pageTitle} | Flagbit Technology Radar" />
       <meta property="og:image" content="${assetUrl('logo.svg')}" />
     </head>
     <body>

@@ -30,7 +30,7 @@ export default function PageHelp({ leaving, onLeave, ...props }) {
           <li><strong>Languages and Frameworks:</strong> We've placed development languages (such as Scala or Golang) here, as well as more low-level development frameworks (such as Play or Symfony), which are useful for implementing custom software of all kinds. </li>
           <li><strong>Tools:</strong> Here we put different software tools - from small helpers to bigger software projects</li>
           <li><strong>Methods and Patterns:</strong> Patterns are so important, and a lot of them are valid for a long time (compared to some tools or frameworks). So, this is the category where we put information on methods and patterns concerning development, continuous x, testing, organization, architecture, etc.</li>
-          <li><strong>Platforms and Services</strong>: Here we include infrastructure platforms and services. We also use this category to communicate news about AOE services that we want all AOE teams to be aware of.</li>
+          <li><strong>Platforms and Services</strong>: Here we include infrastructure platforms and services. We also use this category to communicate news about Flagbit services that we want all Flagbit teams to be aware of.</li>
         </ul>
         <p>Each of the items is classified in one of these rings:</p>
         <ul>

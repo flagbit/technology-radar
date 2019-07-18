@@ -1,5 +1,5 @@
 {
-  "name": "aoe_technology_radar",
+  "name": "flagbit_technology_radar",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -15,7 +15,7 @@
     "clean": "babel-node ./tasks/clean.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "AOE GmbH <contact-de@aoe.com> (http://www.aoe.com)",
+  "author": "Flagbit GmbH & Co. KG <info@flagbit.de> (https://www.flagbit.de)",
   "license": "Apache-2.0",
   "dependencies": {
     "async": "2.6.0",
@@ -51,6 +51,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/AOEpeople/aoe_technology_radar.git"
+    "url": "https://github.com/flagbit/flagbit-technology-radar.git"
   }
 }
