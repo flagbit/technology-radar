@@ -12,7 +12,7 @@ export default function Footer({ items, pageName }) {
         logoContent={<img src={assetUrl('logo.svg')} width="150px" height="60px" />}
       >
         <span className="footnote">
-        Flagbit develop and maintain highly complex web applications such as online shops, PWAs or e-commerce platforms for customers from a wide variety of industries. At our Karlsruhe location, our team of e-commerce consultants and web developers plans, realizes and optimizes innovative and agile solutions based on Magento, Spryker and Akeneo.
+        Flagbit stands for the realization of highly complex and individual e-commerce solutions. The development of a strategic and sustainable project vision is in focus and serves as a basis for the joint cooperation with our customers. In the backend, we rely on PHP-based systems and frameworks such as Akeneo, Magento 2, Spryker, and Symfony.
         </span>
       </Branding>
       <FooterEnd/>
