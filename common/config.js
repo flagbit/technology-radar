@@ -1,7 +1,7 @@
 export const quadrants = [
   'languages-and-frameworks',
-  'methods-and-patterns',
-  'platforms-and-aoe-services',
+  'techniques',
+  'platforms-and-services',
   'tools',
 ];
 
@@ -14,7 +14,6 @@ export const getPageNames = (radar) => {
     'index',
     'overview',
     'help-and-about-tech-radar',
-    'aoe-toolbox',
     ...quadrants,
     ...getItemPageNames(radar.items),
   ]
@@ -31,8 +30,8 @@ export const rings = [
 
 const messages = {
   'languages-and-frameworks': 'Languages & Frameworks',
-  'methods-and-patterns': 'Methods & Patterns',
-  'platforms-and-aoe-services': 'Platforms and AOE Services',
+  'techniques': 'Techniques',
+  'platforms-and-services': 'Platforms & Services',
   'tools': 'Tools',
 };
 

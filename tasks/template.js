@@ -14,7 +14,7 @@ export const vars = (vars) => ({
     const mappings = {
       'languages-and-frameworks': 'Languages & Frameworks',
       'methods-and-patterns': 'Methods & Patterns',
-      'platforms-and-aoe-services': 'Platforms and AOE Services',
+      'platforms-and-services': 'Platforms & Services',
       'tools': 'Tools',
     };
 

@@ -1,6 +1,6 @@
-# AOE Technology Radar
+# Flagbit Technology Radar
 
-A static site generator for AOE Technology Radar
+A static site generator for Flagbit Technology Radar
 
 ## Usage for your own radar?
 The generator is free to use under Open Source License - in fact there are already some other Radars published based on our Radar and there are also Contributions back.
@@ -14,8 +14,8 @@ However please be aware:
 ## Installation
 
 ```
-> git clone git@github.com:AOEpeople/aoe_technology_radar.git
-> cd aoe_technology_radar
+> git clone git@github.com:flagbit/flagbit-technology-radar.git
+> cd flagbit-technology-radar
 > yarn install
 > yarn watch
 ```
@@ -51,7 +51,7 @@ Following front-matter attributes are possible:
 
 * **title**: Name of the Item
 * **quadrant**: Quadrant. One of `languages-and-frameworks`,
-  `methods-and-patterns`, `platforms-and-aoe-services`, `tools`
+  `methods-and-patterns`, `platforms-and-services`, `tools`
 * **ring**: Ring section in radar. One of `trial`, `assess`, `adopt`, `hold`
 * **info**: (optional) A short textual description of the item (visible in
   overview pages)
