@@ -17,3 +17,7 @@ run:
 publish: build
 	$$(aws ecr get-login --no-include-email --region eu-central-1)
 	docker push $(AWS_ACCOUNT).dkr.ecr.eu-central-1.amazonaws.com/$(ECR_REPOSITORY)
+
+.PHONY: install
+install:
+	helm upgrade --install technology-radar --namespace technology-radar .helm
