@@ -1,9 +1,9 @@
-import fs, { readFile, outputFile } from 'fs-extra';
-import path from 'path';
 import frontmatter from 'front-matter';
-import marked from 'marked';
+import { readFile } from 'fs-extra';
 import hljs from 'highlight.js';
-import { radarPath, getAllMarkdownFiles } from './file';
+import marked from 'marked';
+import path from 'path';
+import { getAllMarkdownFiles, radarPath } from './file';
 
 marked.setOptions({
   highlight: code => hljs.highlightAuto(code).value,
@@ -56,8 +56,6 @@ const createRevisionsFromFiles = fileNames =>
             reject(err);
           } else {
             const fm = frontmatter(data);
-            // prepend subfolder to links
-            fm.body = fm.body.replace(/\]\(\//g, '](/techradar/');
 
             // add target attribute to external links
             let html = marked(fm.body);
