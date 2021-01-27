@@ -1,23 +1,30 @@
 .DEFAULT_GOAL := build
-
-AWS_ACCOUNT := 700707183175
-ECR_REPOSITORY := flagbit/technology-radar
+CONTAINER_MANAGER ?= docker
+CONTAINER_REGISTRY ?= $(AWS_ACCOUNT_ID).dkr.ecr.eu-central-1.amazonaws.com/$(REPOSITORY_NAME)
 
 .PHONY: build
 build:
 	yarn install
 	yarn build
-	docker build -t $(AWS_ACCOUNT).dkr.ecr.eu-central-1.amazonaws.com/$(ECR_REPOSITORY) .
-
+	$(CONTAINER_MANAGER) build -t $(CONTAINER_REGISTRY) .
 .PHONY: run
 run:
-	docker run --rm -p 80:80 $(AWS_ACCOUNT).dkr.ecr.eu-central-1.amazonaws.com/$(ECR_REPOSITORY)
-
-.PHONY: publish
-publish: build
+	$(CONTAINER_MANAGER) run --rm --name $(REPOSITORY_NAME) -p 80:80 $(CONTAINER_REGISTRY)
+.PHONY: create-repository
+create-repository:
+	aws ecr create-repository --repository-name $(REPOSITORY_NAME)
+.PHONY: ecr/login
+ecr/login:
 	$$(aws ecr get-login --no-include-email --region eu-central-1)
-	docker push $(AWS_ACCOUNT).dkr.ecr.eu-central-1.amazonaws.com/$(ECR_REPOSITORY)
-
+.PHONY: github/login
+github/login:
+	echo $(GITHUB_CR_PAT) | $(CONTAINER_MANAGER) login ghcr.io -u $(GITHUB_USER) --password-stdin
+.PHONY: publish
+publish:
+	$(CONTAINER_MANAGER) push $(CONTAINER_REGISTRY)
+.PHONY: ecr/describe
+ecr/describe:
+	aws ecr describe-images --repository-name $(REPOSITORY_NAME)
 .PHONY: install
 install:
-	helm upgrade --install technology-radar --namespace technology-radar .helm
+	helm upgrade --install technology-radar --namespace technology-radar --set "image.repository=$(CONTAINER_REGISTRY)" .helm
