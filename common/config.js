@@ -6,7 +6,7 @@ export const quadrants = [
 ];
 
 export function assetUrl(file) {
-  return `/techradar/assets/${file}`
+  return `/assets/${file}`
 }
 
 export const getPageNames = (radar) => {

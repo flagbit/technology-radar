@@ -1,0 +1,28 @@
+version: {}
+path: {}
+
+nameOverride: ""
+fullnameOverride: ""
+
+replicaCount: 1
+
+image:
+  repository: 700707183175.dkr.ecr.eu-central-1.amazonaws.com/flagbit/technology-radar
+  tag: latest
+  pullPolicy: Always
+
+service:
+  type: ClusterIP
+  port: 80
+
+ingress:
+  enabled: true
+  hosts:
+    - host: technology-radar.flagbit.cloud
+      paths:
+        - /
+
+  tls: []
+
+deployment:
+  port: 80

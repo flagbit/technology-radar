@@ -1,14 +1,14 @@
 import 'babel-polyfill';
+import createHistory from 'history/createBrowserHistory';
 import React from 'react';
 import { hydrate } from 'react-dom';
-import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
-import createHistory from 'history/createBrowserHistory';
+import { applyMiddleware, createStore } from 'redux';
+import { isMobileViewport } from '../common/config';
+import actions, { NAVIGATE } from './actions';
+import { track } from './analytics';
 import App from './components/App';
 import appReducer from './reducer';
-import actions, { NAVIGATE } from './actions';
-import { isMobileViewport } from '../common/config';
-import { track } from './analytics';
 
 // Remove .html and map / to index
 const getPageNameFromPath = path => {
@@ -20,7 +20,7 @@ const getPageNameFromPath = path => {
 
 const historyManager = store => {
   const history = createHistory({
-    basename: '/techradar',
+    basename: '/',
   });
 
   // If browser-back button is pressed, provide new pageName to store
