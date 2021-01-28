@@ -20,7 +20,7 @@ ecr/login:
 github/login:
 	echo $(GITHUB_CR_PAT) | $(CONTAINER_MANAGER) login ghcr.io -u $(GITHUB_USER) --password-stdin
 .PHONY: publish
-publish:
+publish: build
 	$(CONTAINER_MANAGER) push $(CONTAINER_REGISTRY)
 .PHONY: ecr/describe
 ecr/describe:
