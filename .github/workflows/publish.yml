@@ -1,5 +1,9 @@
-name: Build
-on: [push]
+name: Publish
+on:
+  push:
+    tags:
+      - 0.*
+      - 1.*
 env:
     CONTAINER_MANAGER: podman
     AWS_ACCOUNT_ID: 700707183175
@@ -7,15 +11,9 @@ env:
     AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
     REPOSITORY_NAME: flagbit-technology-radar
 jobs:
-  build:
-    name: Build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - run: make build
   publish:
-    needs: build
-    name: Push Image
+    name: Publish Image to AWS ECR
+    if: github.event.base_ref == 'refs/heads/master'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
