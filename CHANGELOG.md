@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.1](https://github.com/flagbit/flagbit-technology-radar/compare/1.3.0...1.3.1) (2021-02-11)
+
+
+### Bug Fixes
+
+* Use relative path to store kubeconfig ([a68b711](https://github.com/flagbit/flagbit-technology-radar/commit/a68b711c36d6a3ab85bbf1d113db6ad321911067))
+
 ## [1.3.0](https://github.com/flagbit/flagbit-technology-radar/compare/1.2.3...1.3.0) (2021-02-11)
 
 
