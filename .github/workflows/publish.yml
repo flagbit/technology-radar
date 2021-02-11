@@ -28,7 +28,7 @@ jobs:
       - uses: azure/setup-helm@v1
         with:
           version: '2.13.0'
-      - run: echo "$KUBECONFIG_FILE" > /kubeconfig
+      - run: echo "$KUBECONFIG_FILE" > kubeconfig
       - run: make rollout
         env:
-          KUBECONFIG: /kubeconfig
+          KUBECONFIG: kubeconfig
