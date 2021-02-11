@@ -9,7 +9,7 @@ env:
     AWS_ACCOUNT_ID: 700707183175
     AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
     AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-    REPOSITORY_NAME: flagbit-technology-radar
+    REPOSITORY_NAME: flagbit/technology-radar
 jobs:
   publish:
     name: Publish Image to AWS ECR
