@@ -32,6 +32,10 @@ publish: build
 ecr/describe:
 	aws ecr describe-images --repository-name $(REPOSITORY_NAME)
 
+.PHONY: rollout
+rollout:
+	kubectl -n technology-radar rollout restart deployment technology-radar
+
 .PHONY: install
 install:
 	helm upgrade --install technology-radar --namespace technology-radar --set "image.repository=$(CONTAINER_REGISTRY)" .helm

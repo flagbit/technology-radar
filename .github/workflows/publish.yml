@@ -4,11 +4,14 @@ on:
     tags:
       - '*'
 env:
-    CONTAINER_MANAGER: podman
-    AWS_ACCOUNT_ID: 700707183175
-    AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-    AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-    REPOSITORY_NAME: flagbit/technology-radar
+  CONTAINER_MANAGER: podman
+  AWS_ACCOUNT_ID: 700707183175
+  AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+  AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+  AWS_DEFAULT_REGION: eu-central-1
+  REPOSITORY_NAME: flagbit/technology-radar
+  KUBECONFIG_FILE: ${{ secrets.KUBECONFIG }}
+
 jobs:
   publish:
     name: Publish Image to AWS ECR
@@ -19,6 +22,13 @@ jobs:
         with:
           aws-access-key-id: ${{env.AWS_ACCESS_KEY_ID}}
           aws-secret-access-key: ${{env.AWS_SECRET_ACCESS_KEY}}
-          aws-region: eu-central-1
+          aws-region: ${{env.AWS_DEFAULT_REGION}}
       - uses: aws-actions/amazon-ecr-login@v1
       - run: make publish
+      - uses: azure/setup-helm@v1
+        with:
+          version: '2.13.0'
+      - run: echo "$KUBECONFIG_FILE" > kubeconfig
+      - run: make rollout
+        env:
+          KUBECONFIG: kubeconfig
