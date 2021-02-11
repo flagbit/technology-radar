@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.3](https://github.com/flagbit/flagbit-technology-radar/compare/1.2.2...1.2.3) (2021-02-11)
+
+
+### Bug Fixes
+
+* Remove branch-filter in publish workflow ([0b227f6](https://github.com/flagbit/flagbit-technology-radar/commit/0b227f6c548590915cad89c53e0480cd9c209587))
+
 ### [1.2.2](https://github.com/flagbit/flagbit-technology-radar/compare/1.2.1...1.2.2) (2021-02-11)
 
 
