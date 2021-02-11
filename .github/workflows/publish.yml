@@ -2,8 +2,7 @@ name: Publish
 on:
   push:
     tags:
-      - 0.*
-      - 1.*
+      - '*'
 env:
     CONTAINER_MANAGER: podman
     AWS_ACCOUNT_ID: 700707183175
