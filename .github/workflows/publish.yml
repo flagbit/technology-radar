@@ -10,7 +10,6 @@ env:
   AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
   AWS_DEFAULT_REGION: eu-central-1
   REPOSITORY_NAME: flagbit/technology-radar
-  KUBECONFIG_FILE: ${{ secrets.KUBECONFIG }}
 
 jobs:
   publish:
@@ -27,8 +26,7 @@ jobs:
       - run: make publish
       - uses: azure/setup-helm@v1
         with:
-          version: '2.13.0'
-      - run: echo "$KUBECONFIG_FILE" > kubeconfig
+          version: '2.14.0'
+      - run: helm ls
+      - run: aws --region eu-central-1 eks update-kubeconfig --name eks-production
       - run: make rollout
-        env:
-          KUBECONFIG: kubeconfig
