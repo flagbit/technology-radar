@@ -24,9 +24,9 @@ jobs:
           aws-region: ${{env.AWS_DEFAULT_REGION}}
       - uses: aws-actions/amazon-ecr-login@v1
       - run: make publish
+      - run: aws --region eu-central-1 eks update-kubeconfig --name eks-production
       - uses: azure/setup-helm@v1
         with:
           version: '2.14.0'
       - run: helm ls
-      - run: aws --region eu-central-1 eks update-kubeconfig --name eks-production
       - run: make rollout
