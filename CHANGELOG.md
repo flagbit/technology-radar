@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/flagbit/flagbit-technology-radar/compare/1.3.1...1.4.0) (2021-02-12)
+
+
+### Features
+
+* **radar:** Add "Github Actions" to radar ([0bd0ed8](https://github.com/flagbit/flagbit-technology-radar/commit/0bd0ed8475a5fe7196ff6be5c4e6a686cf1bb1cb))
+* Rollout k8s deployment after publishing ([9c16482](https://github.com/flagbit/flagbit-technology-radar/commit/9c16482b77dcb6d8d95118cff9e64b49cdc33a2f))
+
 ### [1.3.1](https://github.com/flagbit/flagbit-technology-radar/compare/1.3.0...1.3.1) (2021-02-11)
 
 
