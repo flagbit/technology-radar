@@ -1,0 +1,9 @@
+name: release-trigger
+on: release
+
+jobs:
+  trigger:
+    name: Test the trigger
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo 'triggered!'
