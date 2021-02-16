@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.4.8](https://www.github.com/flagbit/technology-radar/compare/v1.4.7...v1.4.8) (2021-02-16)
+
+
+### Bug Fixes
+
+* Don't use GITHUB_TOKEN for release-please ([8ed0c1b](https://www.github.com/flagbit/technology-radar/commit/8ed0c1bee907f35719440cf92b31aca08d81edbc))
+
 ### [1.4.7](https://www.github.com/flagbit/technology-radar/compare/v1.4.6...v1.4.7) (2021-02-16)
 
 
