@@ -1,8 +1,5 @@
 name: Publish
-on:
-  push:
-    tags:
-      - '*'
+on: [release]
 env:
   CONTAINER_MANAGER: podman
   AWS_ACCOUNT_ID: 700707183175
