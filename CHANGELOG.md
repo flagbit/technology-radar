@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.4.5](https://www.github.com/flagbit/technology-radar/compare/v1.4.4...v1.4.5) (2021-02-16)
+
+
+### Bug Fixes
+
+* Add release-type to publish trigger ([237d11d](https://www.github.com/flagbit/technology-radar/commit/237d11d380ece9ba9aa69cc7ae4f5f9e1280f1d4))
+
 ### [1.4.4](https://www.github.com/flagbit/technology-radar/compare/v1.4.3...v1.4.4) (2021-02-16)
 
 
