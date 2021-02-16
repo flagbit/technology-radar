@@ -1,5 +1,9 @@
-name: publish
-on: release
+name: rollout
+on:
+  workflow_run:
+    workflows: ["publish"]
+    types: 
+      - completed
 
 env:
   CONTAINER_MANAGER: podman
@@ -11,7 +15,7 @@ env:
 
 jobs:
   publish:
-    name: Publish Image to AWS ECR
+    name: Rollout Latest Release to EKS
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -20,5 +24,9 @@ jobs:
           aws-access-key-id: ${{env.AWS_ACCESS_KEY_ID}}
           aws-secret-access-key: ${{env.AWS_SECRET_ACCESS_KEY}}
           aws-region: ${{env.AWS_DEFAULT_REGION}}
-      - uses: aws-actions/amazon-ecr-login@v1
-      - run: make publish
+      - run: aws --region eu-central-1 eks update-kubeconfig --name eks-production
+      - uses: azure/setup-helm@v1
+        with:
+          version: '2.14.0'
+      - run: helm ls
+      - run: make rollout
