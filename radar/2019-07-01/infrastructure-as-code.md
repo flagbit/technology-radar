@@ -1,6 +1,6 @@
 ---
 title:      "Infrastructure as Code"
-ring:       trial
+ring:       adopt
 quadrant:   techniques
 
 ---
