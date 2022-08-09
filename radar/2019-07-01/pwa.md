@@ -1,6 +1,6 @@
 ---
 title: 'PWA'
-ring: trial
+ring: hold
 quadrant: techniques
 ---
 
