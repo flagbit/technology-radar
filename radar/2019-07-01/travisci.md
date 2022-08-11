@@ -1,6 +1,6 @@
 ---
 title:      "Travis CI"
-ring:       adopt
+ring:       hold
 quadrant:   platforms-and-services
 
 ---

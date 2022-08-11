@@ -1,6 +1,6 @@
 ---
 title:      "Netdata"
-ring:       assess
+ring:       hold
 quadrant:   platforms-and-services
 
 ---

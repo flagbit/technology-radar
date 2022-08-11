@@ -1,6 +1,6 @@
 ---
 title:      "Thumbor"
-ring:       trial
+ring:       assess
 quadrant:   platforms-and-services
 
 ---

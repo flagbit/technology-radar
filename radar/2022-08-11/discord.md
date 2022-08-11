@@ -1,6 +1,6 @@
 ---
-title:      "Prometheus"
-ring:       adopt
+title:      "Discord"
+ring:       hold
 quadrant:   platforms-and-services
 
 ---
