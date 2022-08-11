@@ -1,6 +1,6 @@
 ---
 title:      "GitLab"
-ring:       trial
+ring:       hold
 quadrant:   platforms-and-services
 
 ---

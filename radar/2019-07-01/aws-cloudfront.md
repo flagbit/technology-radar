@@ -1,6 +1,6 @@
 ---
 title:      "AWS CloudFront"
-ring:       adopt
+ring:       hold
 quadrant:   platforms-and-services
 
 ---

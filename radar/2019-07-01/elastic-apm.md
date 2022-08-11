@@ -1,6 +1,6 @@
 ---
 title:      "Elastic APM"
-ring:       assess
+ring:       hold
 quadrant:   platforms-and-services
 
 ---

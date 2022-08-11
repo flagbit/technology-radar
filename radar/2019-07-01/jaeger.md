@@ -1,6 +1,6 @@
 ---
 title:      "Jaeger"
-ring:       assess
+ring:       hold
 quadrant:   platforms-and-services
 
 ---

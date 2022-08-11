@@ -1,6 +1,6 @@
 ---
 title:      "RabbitMQ"
-ring:       assess
+ring:       adopt
 quadrant:   platforms-and-services
 
 ---

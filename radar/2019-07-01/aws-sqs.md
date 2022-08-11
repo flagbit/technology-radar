@@ -1,6 +1,6 @@
 ---
 title:      "AWS SQS"
-ring:       trial
+ring:       hold
 quadrant:   platforms-and-services
 
 ---

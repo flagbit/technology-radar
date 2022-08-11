@@ -1,6 +1,6 @@
 ---
 title:      "AWS Lambda"
-ring:       assess
+ring:       hold
 quadrant:   platforms-and-services
 
 ---

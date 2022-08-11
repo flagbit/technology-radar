@@ -1,6 +1,6 @@
 ---
 title:      "Jenkins"
-ring:       adopt
+ring:       hold
 quadrant:   platforms-and-services
 
 ---
